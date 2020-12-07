@@ -60,14 +60,14 @@ class IpAddress {
          resultObject.ipv4 = firstIpAddress;
          resultObject.ipv6= ipv6Address;
        }
-       firstIpAddress = JSON.stringify(resultObject); 
+       firstIpAddress =resultObject; 
   }
   // Call the passed callback function.
   // Node.js convention is to pass error data as the first argument to a callback.
   // The IAP convention is to pass returned data as the first argument and error
   // data as the second argument to the callback function.
  if(firstIpAddress == null){
-   firstIpAddress = JSON.stringify(resultObject);
+   firstIpAddress = resultObject;
  }
   return callback(firstIpAddress, callbackError);
 }
